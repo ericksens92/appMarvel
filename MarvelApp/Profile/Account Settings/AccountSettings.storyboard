@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Account SettingVC-->
+        <scene sceneID="aZS-So-Fm8">
+            <objects>
+                <viewController storyboardIdentifier="AccountSettings" modalPresentationStyle="fullScreen" id="Qqf-zk-P6H" customClass="AccountSettingVC" customModule="MarvelApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FhS-4t-ZdY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyH-sq-BBK">
+                                <rect key="frame" x="120" y="44" width="134" height="19"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqd-aD-JmD">
+                                <rect key="frame" x="16" y="104" width="96" height="22"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="19"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@stanlee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKo-aY-lPB">
+                                <rect key="frame" x="24" y="133" width="73" height="19"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
+                                <color key="textColor" systemColor="systemGray2Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tA7-NU-2IW">
+                                <rect key="frame" x="16" y="171" width="58" height="22"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="19"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="stanlee@marvel.com.br" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZy-S5-g1W">
+                                <rect key="frame" x="24" y="200" width="186" height="19"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
+                                <color key="textColor" systemColor="systemGray2Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tkz-h9-rha">
+                                <rect key="frame" x="16" y="32" width="12.5" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="ISN-rx-VkB"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" image="chevron.backward" catalog="system"/>
+                                <connections>
+                                    <action selector="backButton:" destination="Qqf-zk-P6H" eventType="touchUpInside" id="1ej-id-haM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wA7-eF-nci"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wA7-eF-nci" firstAttribute="trailing" secondItem="lKo-aY-lPB" secondAttribute="trailing" constant="278" id="0lT-EN-XQe"/>
+                            <constraint firstItem="nqd-aD-JmD" firstAttribute="top" secondItem="Tkz-h9-rha" secondAttribute="bottom" constant="29" id="1Op-tN-hBh"/>
+                            <constraint firstItem="wA7-eF-nci" firstAttribute="trailing" secondItem="gZy-S5-g1W" secondAttribute="trailing" constant="165" id="3eU-YU-1EL"/>
+                            <constraint firstItem="wA7-eF-nci" firstAttribute="trailing" secondItem="tA7-NU-2IW" secondAttribute="trailing" constant="301" id="5wA-Pf-kr2"/>
+                            <constraint firstItem="lKo-aY-lPB" firstAttribute="leading" secondItem="wA7-eF-nci" secondAttribute="leading" constant="24" id="A93-b3-dop"/>
+                            <constraint firstItem="lKo-aY-lPB" firstAttribute="top" secondItem="nqd-aD-JmD" secondAttribute="bottom" constant="7" id="CbK-9i-4pf"/>
+                            <constraint firstItem="gZy-S5-g1W" firstAttribute="top" secondItem="tA7-NU-2IW" secondAttribute="bottom" constant="7" id="Cgp-Mg-ziy"/>
+                            <constraint firstItem="hyH-sq-BBK" firstAttribute="leading" secondItem="Tkz-h9-rha" secondAttribute="trailing" constant="91.5" id="Eac-50-5rI"/>
+                            <constraint firstItem="gZy-S5-g1W" firstAttribute="leading" secondItem="wA7-eF-nci" secondAttribute="leading" constant="24" id="FDj-Qn-xCH"/>
+                            <constraint firstItem="wA7-eF-nci" firstAttribute="trailing" secondItem="hyH-sq-BBK" secondAttribute="trailing" constant="121" id="K1a-wu-L9L"/>
+                            <constraint firstItem="nqd-aD-JmD" firstAttribute="leading" secondItem="wA7-eF-nci" secondAttribute="leading" constant="16" id="RLf-KE-rNo"/>
+                            <constraint firstItem="hyH-sq-BBK" firstAttribute="top" secondItem="wA7-eF-nci" secondAttribute="top" constant="44" id="UoE-A0-mOt"/>
+                            <constraint firstItem="tA7-NU-2IW" firstAttribute="leading" secondItem="wA7-eF-nci" secondAttribute="leading" constant="16" id="X4p-sx-6RQ"/>
+                            <constraint firstItem="wA7-eF-nci" firstAttribute="trailing" secondItem="nqd-aD-JmD" secondAttribute="trailing" constant="263" id="eP9-7y-Rt5"/>
+                            <constraint firstItem="tA7-NU-2IW" firstAttribute="top" secondItem="lKo-aY-lPB" secondAttribute="bottom" constant="19" id="iaG-mr-1iF"/>
+                            <constraint firstItem="Tkz-h9-rha" firstAttribute="leading" secondItem="wA7-eF-nci" secondAttribute="leading" constant="16" id="l3i-yy-nTo"/>
+                            <constraint firstItem="Tkz-h9-rha" firstAttribute="top" secondItem="wA7-eF-nci" secondAttribute="top" constant="32" id="vLK-ab-cac"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qIk-be-hSW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-90.400000000000006" y="-2.2488755622188905"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

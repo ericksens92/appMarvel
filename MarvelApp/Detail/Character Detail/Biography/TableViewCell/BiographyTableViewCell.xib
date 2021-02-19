@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BiographyTableViewCell" rowHeight="50" id="KGk-i7-Jjw" customClass="BiographyTableViewCell" customModule="MarvelApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AA0-Vg-PVV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biography" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjO-ea-eoy">
+                                <rect key="frame" x="25" y="2" width="198" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="198" id="56R-Jg-0Ip"/>
+                                    <constraint firstAttribute="height" constant="24" id="zXj-BA-Odv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msk-if-kA8">
+                                <rect key="frame" x="25" y="26" width="270" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="xt4-o0-cRq"/>
+                                </constraints>
+                                <mutableString key="text"> Testeeeeevddvdvdvfdvdvdvdfvdvsvvdfvdfsvfdvcdfvdfbvfgbhhglfv,fdvpov;ksdf,vpdtov.dfvpfdlvdt.pv[ldfpv[dlvfdp;v.vpt[lgrtgptlgrgvvbfgbgyiomfisosmcafcvoeimvfgovmvctvodmvvfkvsovidmfvibfbnyiubdfjgtigojdmdvdvfdimnbvgfobfomtfovbfibmvfgvfgobgbnmnfgobmbcvkmfgsvmsvoirmasdocefvmervoesm,ovsfmbriovsdfmdiosfbgbiufgnvsfiuvfgiusfbnvnsfiunsnnsiuvrsnvsiuvnsviufsvsdfiuvfnvfiuvsfnvnfnivfsbvsfiuvfdp;v.vpt[lgrtgptlgrgvvbfgbgyiomfisosmcafcvoeimvfgovmvctvodmvvfkvsovidmfvibfbnyiubdfjgtigojdmdvdvfdimnbvgfobfomtfovbfibmvfgvfgobgbnmnfgobmbcvkmfgsvmsvoirmasdocefvmervoesm,ovsfmbriovsdfmdiosfbgbiufgnvsfiuvfgiusfbnvnsfiunsnnsiuvrsnvsiuvnsviufsvsdfiuvfnvfiuvsfnvnfnivfsbvsfiuvsnvsnvsfdivbsfdvisflamet, adipisicing pecu, FIMMM</mutableString>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="msk-if-kA8" secondAttribute="trailing" constant="25" id="1gx-Mu-J4s"/>
+                            <constraint firstAttribute="bottom" secondItem="msk-if-kA8" secondAttribute="bottom" id="A3h-nF-CmI"/>
+                            <constraint firstItem="msk-if-kA8" firstAttribute="top" secondItem="hjO-ea-eoy" secondAttribute="bottom" id="Mgz-5n-NrY"/>
+                            <constraint firstItem="hjO-ea-eoy" firstAttribute="top" secondItem="AA0-Vg-PVV" secondAttribute="top" constant="2" id="a5X-MO-Dm1"/>
+                            <constraint firstItem="msk-if-kA8" firstAttribute="leading" secondItem="hjO-ea-eoy" secondAttribute="leading" id="aak-uH-CoI"/>
+                            <constraint firstItem="hjO-ea-eoy" firstAttribute="leading" secondItem="AA0-Vg-PVV" secondAttribute="leading" constant="25" id="dML-SI-e9x"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="AA0-Vg-PVV" secondAttribute="trailing" id="IFR-5R-A0n"/>
+                    <constraint firstItem="AA0-Vg-PVV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="djU-Td-iiA"/>
+                    <constraint firstAttribute="bottom" secondItem="AA0-Vg-PVV" secondAttribute="bottom" id="meM-dM-nCr"/>
+                    <constraint firstItem="AA0-Vg-PVV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="v1M-As-Rbu"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="titleLabel" destination="hjO-ea-eoy" id="aaK-we-GRt"/>
+            </connections>
+            <point key="canvasLocation" x="140.57971014492756" y="145.98214285714286"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,30 @@
+PODS:
+  - Alamofire (5.4.0)
+  - CPF-CNPJ-Validator (1.0.2)
+  - Kingfisher (5.15.7):
+    - Kingfisher/Core (= 5.15.7)
+  - Kingfisher/Core (5.15.7)
+  - SwiftHash (2.0.2)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.2)
+  - CPF-CNPJ-Validator
+  - Kingfisher (~> 5.0)
+  - SwiftHash
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - CPF-CNPJ-Validator
+    - Kingfisher
+    - SwiftHash
+
+SPEC CHECKSUMS:
+  Alamofire: 3b6a534a3df22db367e4dedeeca73d1ddfcf0e2f
+  CPF-CNPJ-Validator: 0b08069595da2c4b20e964b743bfc0a7334d5347
+  Kingfisher: 6e1a13523fcb1c86924ce53affe4ac957e544d59
+  SwiftHash: 6d312abe61c8359bdef8d0093642f3a70b1c17ba
+
+PODFILE CHECKSUM: 9c5d8e210fe99189f3d80027ba65275a97dcaf34
+
+COCOAPODS: 1.10.0

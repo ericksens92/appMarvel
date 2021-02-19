@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail Expation Img-->
+        <scene sceneID="kb5-3I-GWL">
+            <objects>
+                <viewController storyboardIdentifier="DetailExpationImg" modalPresentationStyle="fullScreen" id="dhy-Sc-twm" customClass="DetailExpationImg" customModule="MarvelApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fnB-Nf-fSI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Imagem 55" translatesAutoresizingMaskIntoConstraints="NO" id="Btf-pN-2r0">
+                                <rect key="frame" x="20" y="94" width="374" height="718"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9KH-7c-LCM">
+                                <rect key="frame" x="20" y="44" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="hcO-fL-Mt4"/>
+                                    <constraint firstAttribute="height" constant="40" id="xNN-Em-nIL"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="chevron.backward" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedBackButton:" destination="dhy-Sc-twm" eventType="touchUpInside" id="c59-1g-RFd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bq8-1y-kRt"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Btf-pN-2r0" firstAttribute="top" secondItem="bq8-1y-kRt" secondAttribute="top" constant="50" id="56i-vF-xte"/>
+                            <constraint firstItem="bq8-1y-kRt" firstAttribute="bottom" secondItem="Btf-pN-2r0" secondAttribute="bottom" constant="50" id="5dt-Fs-Cfx"/>
+                            <constraint firstItem="Btf-pN-2r0" firstAttribute="leading" secondItem="bq8-1y-kRt" secondAttribute="leading" constant="20" id="FDu-gX-4yQ"/>
+                            <constraint firstItem="9KH-7c-LCM" firstAttribute="leading" secondItem="bq8-1y-kRt" secondAttribute="leading" constant="20" id="GcF-ye-e5R"/>
+                            <constraint firstItem="9KH-7c-LCM" firstAttribute="top" secondItem="bq8-1y-kRt" secondAttribute="top" id="f4n-YD-8X2"/>
+                            <constraint firstItem="bq8-1y-kRt" firstAttribute="trailing" secondItem="Btf-pN-2r0" secondAttribute="trailing" constant="20" id="qw9-hS-njj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="9KH-7c-LCM" id="lBl-B8-YJa"/>
+                        <outlet property="image" destination="Btf-pN-2r0" id="z7D-6b-muO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FGn-Rw-bqx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-366" y="47"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Imagem 55" width="171.5" height="119"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+    </resources>
+</document>
