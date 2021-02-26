@@ -7,6 +7,10 @@
 
 import UIKit
 import CPF_CNPJ_Validator
+import FirebaseAuth
+import FirebaseDatabase
+import FirebaseCore
+
 class RegisterVC: BaseViewController {
 
    
@@ -15,9 +19,12 @@ class RegisterVC: BaseViewController {
     
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var UsernameTextField: UITextField!
     
-   
-  @IBOutlet var textFields: [UITextField]!
+    @IBOutlet weak var emailTextField: UITextField!
+    
+    @IBOutlet weak var senhaTextField: UITextField!
+    @IBOutlet var textFields: [UITextField]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +47,7 @@ class RegisterVC: BaseViewController {
        
        
        
-        
+       
         
         
  //       if !self.isValidField(textField: self.emailTextField, type: .email){
@@ -63,17 +70,24 @@ class RegisterVC: BaseViewController {
         if textFieldsEstaoPreehcidos && textFieldsEstaoValidos{
             let alerta = ValidaFormulario().exibeNotificacaoPreenchidos(titulo: "Parabens", mensagem: "Cadastro realizado com sucesso")
             
+            
             present(alerta, animated: true, completion: nil)
            
-            self.performSegue(withIdentifier: "homeTabBar", sender: nil)
+            
         }
         else {
-            let alerta = ValidaFormulario().exibeNotificacaoPreenchidos(titulo: "Atencao", mensagem: "Preencha todos os campos Corretamente")
+            let alerta = ValidaFormulario().exibeNotificacaoPreenchidos(titulo: "Atenção", mensagem: "Preencha todos os campos Corretamente")
             
             present(alerta, animated: true, completion: nil)
         }
         
-       
+        guard let email = emailTextField.text else {return}
+        guard let senha = senhaTextField.text else {return}
+        guard let username = UsernameTextField.text else {return}
+        
+        ValidaFormulario().createUser(withEmail: email, password: senha, username: username)
+        
+        self.performSegue(withIdentifier: "homeTabBar", sender: nil)
     }
     
    

@@ -7,6 +7,8 @@
 
 import UIKit
 import CPF_CNPJ_Validator
+import Firebase
+import FirebaseDatabase
 enum tiposDeTextfileds: Int{
     case nome = 1
     case email = 2
@@ -52,6 +54,28 @@ class ValidaFormulario: NSObject{
         notificacao.addAction(botao)
         
         return notificacao
+    }
+    
+    func createUser(withEmail email: String , password:String , username: String){
+        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+            
+            if let error = error {
+                print("falha ao criar usuario :",error.localizedDescription)
+                return
+            }
+            guard let uid = result?.user.uid else {return}
+            
+            let values = ["email": email , "username":username]
+            Database.database().reference().child("users").child(uid).updateChildValues(values) { (error, ref) in
+               
+                if let error = error {
+                    print("falha ao criar usuario :",error.localizedDescription)
+                    return
+                }
+                print("Cadastro realizado com sucesso")
+            }
+          // ...
+        }
     }
 
 }

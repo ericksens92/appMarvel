@@ -63,10 +63,20 @@ extension HomeVC:UICollectionViewDelegate ,UICollectionViewDataSource{
         
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       /* let vc = storyboard?.instantiateViewController(identifier: "CharacterDetail") as? CharacterDetailVC
-        vc?.Hero = arrayHero[indexPath.row]
-        self.navigationController?.pushViewController(vc!, animated: true)
- */
+        self.performSegue(withIdentifier: "teste" , sender: arrayHero[indexPath.row])
+     
+  
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         
+        if let vc = segue.destination as? CharacterDetailVC{
+            if let hero = sender as? Herois{
+                
+                vc.Hero = hero
+            }
+            
+        }
+        
     }
 }
 extension HomeVC: UICollectionViewDelegateFlowLayout

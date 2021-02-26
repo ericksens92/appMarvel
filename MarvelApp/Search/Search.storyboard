@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -64,7 +64,7 @@
                             <constraint firstItem="MCS-LV-soO" firstAttribute="top" secondItem="LEb-nd-diw" secondAttribute="top" constant="20" id="nwM-Vk-OT9"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Search" id="SuD-24-5ax"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="Icon awesome-search" id="SuD-24-5ax"/>
                     <connections>
                         <outlet property="searchBar" destination="MCS-LV-soO" id="Vm7-y6-iID"/>
                         <outlet property="tfName" destination="xqx-bO-6Oz" id="1Qg-fb-4Ui"/>
@@ -75,7 +75,7 @@
             </objects>
             <point key="canvasLocation" x="1408.6956521739132" y="152.67857142857142"/>
         </scene>
-        <!--Collection Search-->
+        <!--Search-->
         <scene sceneID="prB-hH-FhD">
             <objects>
                 <viewController storyboardIdentifier="Teste" id="Zcu-Cu-5QD" customClass="CollectionSearch" customModule="MarvelApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -117,14 +117,57 @@
                             <constraint firstItem="PXa-Dv-SMf" firstAttribute="trailing" secondItem="upM-rU-Md1" secondAttribute="trailing" id="uNC-mF-Xbk"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Search" image="Icon awesome-search2" id="MOp-Nx-hqw"/>
                     <navigationItem key="navigationItem" id="izf-M8-s7d"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionViewSearch" destination="PXa-Dv-SMf" id="fGz-0W-vqz"/>
+                        <segue destination="yhi-YI-xED" kind="show" identifier="Teste2" id="gSw-cy-pUg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CGh-dI-bc5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2185.507246376812" y="152.67857142857142"/>
+            <point key="canvasLocation" x="2275.36231884058" y="152.67857142857142"/>
+        </scene>
+        <!--Character DetailVC-->
+        <scene sceneID="U5F-6O-cFO">
+            <objects>
+                <viewController id="yhi-YI-xED" customClass="CharacterDetailVC" customModule="MarvelApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VeK-tU-ScQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mo1-iA-yyj">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="lXm-Uo-gpb">
+                                <rect key="frame" x="197" y="394" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dEc-Bp-SkK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dEc-Bp-SkK" firstAttribute="bottom" secondItem="mo1-iA-yyj" secondAttribute="bottom" id="HEc-uG-l23"/>
+                            <constraint firstItem="dEc-Bp-SkK" firstAttribute="trailing" secondItem="mo1-iA-yyj" secondAttribute="trailing" id="TEK-Ni-5H6"/>
+                            <constraint firstItem="mo1-iA-yyj" firstAttribute="leading" secondItem="dEc-Bp-SkK" secondAttribute="leading" id="mFd-8H-Rm4"/>
+                            <constraint firstItem="mo1-iA-yyj" firstAttribute="top" secondItem="dEc-Bp-SkK" secondAttribute="top" id="xKy-yG-fSP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="92u-Xg-aWH"/>
+                    <connections>
+                        <outlet property="Loading" destination="lXm-Uo-gpb" id="Rje-XS-p28"/>
+                        <outlet property="webview" destination="mo1-iA-yyj" id="kwm-fX-ou9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bYV-Tn-L3p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3035" y="153"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="GqJ-0F-mcK">
@@ -146,6 +189,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Icon awesome-search" width="12" height="12"/>
+        <image name="Icon awesome-search2" width="12" height="12"/>
         <image name="Intersecao_3" width="386" height="279"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

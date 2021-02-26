@@ -53,6 +53,22 @@ extension CollectionSearch: UICollectionViewDelegate , UICollectionViewDataSourc
         cell?.prepareCell(with: hero)
         return cell ?? UICollectionViewCell()
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "Teste2" , sender: Hero[indexPath.row])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         
+        if let vc = segue.destination as? CharacterDetailVC{
+            if let hero = sender as? Herois{
+                
+                vc.Hero = hero
+            }
+            
+        }
+        
+    }
 }
 
 

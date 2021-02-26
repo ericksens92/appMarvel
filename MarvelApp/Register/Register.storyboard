@@ -140,7 +140,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="UsernameTextField" destination="6Ct-8h-RmK" id="358-ZM-qVv"/>
+                        <outlet property="emailTextField" destination="MUu-QE-FX1" id="d2F-AB-don"/>
                         <outlet property="loginButton" destination="Ah8-ch-dzh" id="WuR-H3-1By"/>
+                        <outlet property="senhaTextField" destination="4oU-dg-oPK" id="6wY-xu-n7f"/>
                         <outlet property="signUpButton" destination="SnQ-fr-AfN" id="JJq-uo-Z7x"/>
                         <outletCollection property="textFields" destination="6Ct-8h-RmK" collectionClass="NSMutableArray" id="orz-NS-tIU"/>
                         <outletCollection property="textFields" destination="MUu-QE-FX1" collectionClass="NSMutableArray" id="bq1-G3-eCt"/>

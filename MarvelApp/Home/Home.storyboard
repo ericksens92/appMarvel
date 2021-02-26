@@ -25,9 +25,6 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Chacarter"/>
-                                <connections>
-                                    <segue destination="YNI-Nw-x4B" kind="show" identifier="CharacterDetail" id="53f-vl-f7t"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ao0-fQ-1gp">
                                 <rect key="frame" x="157.5" y="389" width="99" height="48"/>
@@ -72,24 +69,56 @@
                             <constraint firstItem="trd-hd-Awg" firstAttribute="leading" secondItem="NKn-B6-njN" secondAttribute="leading" id="yWN-Ei-SYx"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="oiO-da-0GV"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="Icon material-home" id="oiO-da-0GV"/>
                     <connections>
                         <outlet property="HomeCollectionView" destination="trd-hd-Awg" id="hz3-Y3-PIY"/>
+                        <segue destination="MPV-4w-7gD" kind="show" identifier="teste" id="Nup-aq-GVg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wJS-Ky-zyW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1326.0869565217392" y="146.65178571428569"/>
         </scene>
-        <!--CharacterDetail-->
-        <scene sceneID="STa-6v-tkp">
+        <!--Item-->
+        <scene sceneID="AqC-oN-KQD">
             <objects>
-                <viewControllerPlaceholder storyboardName="CharacterDetail" referencedIdentifier="CharacterDetail" id="YNI-Nw-x4B" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="qRP-ob-EK4"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mSh-LJ-Nvc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="MPV-4w-7gD" customClass="CharacterDetailVC" customModule="MarvelApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Su1-XK-nhd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sRs-47-drj">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="RgQ-RM-Ket">
+                                <rect key="frame" x="197" y="394" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kBE-io-NvV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kBE-io-NvV" firstAttribute="trailing" secondItem="sRs-47-drj" secondAttribute="trailing" id="TDq-7j-2Dx"/>
+                            <constraint firstItem="sRs-47-drj" firstAttribute="top" secondItem="kBE-io-NvV" secondAttribute="top" id="a6y-F9-dbd"/>
+                            <constraint firstItem="kBE-io-NvV" firstAttribute="bottom" secondItem="sRs-47-drj" secondAttribute="bottom" id="iXd-bB-xKG"/>
+                            <constraint firstItem="sRs-47-drj" firstAttribute="leading" secondItem="kBE-io-NvV" secondAttribute="leading" id="k16-ha-ROV"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" image="Icon material-home2" id="gs8-Zc-uz4"/>
+                    <navigationItem key="navigationItem" id="Hp9-7u-G4U"/>
+                    <connections>
+                        <outlet property="Loading" destination="RgQ-RM-Ket" id="u0R-VT-uPT"/>
+                        <outlet property="webview" destination="sRs-47-drj" id="sBK-eg-GJ7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fxg-j0-G6t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1914" y="0.0"/>
+            <point key="canvasLocation" x="2253.6231884057975" y="153.34821428571428"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="CUZ-kC-UD4">
@@ -107,10 +136,12 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tci-Q0-amt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="415.94202898550731" y="146.65178571428569"/>
+            <point key="canvasLocation" x="414" y="147"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Icon material-home" width="14.5" height="12"/>
+        <image name="Icon material-home2" width="14.5" height="12"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

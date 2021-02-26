@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SearchCharactersCollectionViewCell" id="gTV-IL-0wX" customClass="CharactersCollectionViewCell" customModule="MarvelApp" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SearchCharactersCollectionViewCell" id="gTV-IL-0wX" customClass="SearchCharactersCollectionViewCell" customModule="MarvelApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="293" height="181"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -50,8 +50,8 @@
             </constraints>
             <size key="customSize" width="293" height="181"/>
             <connections>
-                <outlet property="Character" destination="tfZ-XC-DnG" id="Vsq-3x-hnT"/>
-                <outlet property="LblNome" destination="oe5-eX-REo" id="nuX-bq-p7Y"/>
+                <outlet property="Character" destination="tfZ-XC-DnG" id="LSZ-Bp-BXg"/>
+                <outlet property="LblNome" destination="oe5-eX-REo" id="0Bt-J0-7J1"/>
             </connections>
             <point key="canvasLocation" x="242.75362318840581" y="131.58482142857142"/>
         </collectionViewCell>

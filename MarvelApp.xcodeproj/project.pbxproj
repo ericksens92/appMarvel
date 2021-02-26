@@ -55,6 +55,7 @@
 		A722C9C425D2BB690049ECBB /* AccountSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A722C9C325D2BB690049ECBB /* AccountSettingsVC.swift */; };
 		A73A6B9B25D5B81700DC3027 /* CharacterDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A73A6B9A25D5B81700DC3027 /* CharacterDetail.storyboard */; };
 		A73A6BA725DC639E00DC3027 /* ValidaFormulario.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73A6BA625DC639E00DC3027 /* ValidaFormulario.swift */; };
+		A744C00725E5DE18005139AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A744C00625E5DE18005139AE /* GoogleService-Info.plist */; };
 		A74AD25B25462D5C006C6FAE /* CharactersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74AD25925462D5C006C6FAE /* CharactersCollectionViewCell.swift */; };
 		A74AD25C25462D5C006C6FAE /* CharactersCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A74AD25A25462D5C006C6FAE /* CharactersCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -135,6 +136,7 @@
 		A722C9C325D2BB690049ECBB /* AccountSettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountSettingsVC.swift; path = "MarvelApp/Profile/Account Settings/AccountSettingsVC.swift"; sourceTree = SOURCE_ROOT; };
 		A73A6B9A25D5B81700DC3027 /* CharacterDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CharacterDetail.storyboard; path = "MarvelApp/Detail/Character Detail/CharacterDetail.storyboard"; sourceTree = SOURCE_ROOT; };
 		A73A6BA625DC639E00DC3027 /* ValidaFormulario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidaFormulario.swift; sourceTree = "<group>"; };
+		A744C00625E5DE18005139AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A74AD25925462D5C006C6FAE /* CharactersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCollectionViewCell.swift; sourceTree = "<group>"; };
 		A74AD25A25462D5C006C6FAE /* CharactersCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharactersCollectionViewCell.xib; sourceTree = "<group>"; };
 		B0F41B1528FF494156D77415 /* Pods-MarvelAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelAppTests.release.xcconfig"; path = "Target Support Files/Pods-MarvelAppTests/Pods-MarvelAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 				04CC03832519719400431213 /* SceneDelegate.swift */,
 				04CC038F2519719600431213 /* LaunchScreen.storyboard */,
 				04CC03922519719600431213 /* Info.plist */,
+				A744C00625E5DE18005139AE /* GoogleService-Info.plist */,
 				04CC038A2519719400431213 /* MarvelApp.xcdatamodeld */,
 			);
 			path = MarvelApp;
@@ -336,7 +339,6 @@
 				042110C02523FD360007431D /* Sub Image */,
 				0423F4232523D2E70083B826 /* Character Specification  */,
 				04D906A52520E170006D28C7 /* Header */,
-				04D906A02520D716006D28C7 /* CharacterDetailVC.swift */,
 			);
 			path = "Character Detail";
 			sourceTree = "<group>";
@@ -392,6 +394,7 @@
 		04D906A52520E170006D28C7 /* Header */ = {
 			isa = PBXGroup;
 			children = (
+				04D906A02520D716006D28C7 /* CharacterDetailVC.swift */,
 				A73A6B9A25D5B81700DC3027 /* CharacterDetail.storyboard */,
 			);
 			path = Header;
@@ -562,6 +565,7 @@
 				04CC03EF251A1F6100431213 /* Search.storyboard in Resources */,
 				04CC03892519719400431213 /* Main.storyboard in Resources */,
 				042110C42523FDA90007431D /* SubViewTableViewCell.xib in Resources */,
+				A744C00725E5DE18005139AE /* GoogleService-Info.plist in Resources */,
 				04CC03CD251983B300431213 /* Register.storyboard in Resources */,
 				0423F4282523D3620083B826 /* CharacterSpecificationTableViewCell.xib in Resources */,
 			);
